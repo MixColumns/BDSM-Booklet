@@ -1,13 +1,66 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Welcome to Overleaf --- just edit your LaTeX on the left,
-% and we'll compile it for you on the right. If you open the
-% 'Share' menu, you can invite other users to edit at the same
-% time. See www.overleaf.com/learn for more info. Enjoy!
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass{article}
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[pdftex]{hyperref}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{enumitem}
+\usepackage[main=ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{datetime}
+\usepackage{qrcode}
+\usepackage{fancyhdr}
+
+%%%%%%%%%%%%%%%
+
 \begin{document}
-Hello Worl!\\
-Everything is setup now...
+
+\setlength\dashlinedash{0.2pt}
+\setlength\dashlinegap{1.5pt}
+\setlength\arrayrulewidth{0.3pt}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{10em}}
+
+%%%%%%%%%%%%%%% Title Settings
+
+\title{BDSM Booklet}
+\author{Nicole / CoffeeFox}
+\date{\today \ \currenttime \bigbreak \qrcode[hyperlink,height=3cm]{https://github.com/MixColumns/BDSM-Booklet/releases/download/main/main.pdf}}
+\renewcommand*\contentsname{Inhaltsverzeichnis}
+
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[RO,LE]{\textbf{BDSM Booklet}}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{ \qrcode[hyperlink,height=1cm]{https://github.com/MixColumns/BDSM-Booklet/releases/download/main/main.pdf}}
+%\fancyfoot[CO,RE]{Center Text e.g. Credit}
+
+%%%%%%%%%%%%%%% Make Title
+
+\maketitle
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%% Allgemeines
+
+\section{Allgemeines}
+Diese Sammlung soll dabei helfen das Spielen in der Szene sicherer und einfacher zu machen. Die wichtigsten Themen sollten enthalten sein und die Formulare kännen digital oder manuell ausgefüllt werden und anschließend an Partnerpersonen versendet, in der Cloud geteilt, oder in einem Ordner mitgenommen werden. Prinzipiell ist es nicht nötig alle Formular und Seiten auszufüllen. Es können nach Bedarf einzelne Seiten genutzt werden. Ich habe versucht dies beim Design bestmöglich zu berücksichtigen.\bigbreak
+
+Die Inspiration für dieses Booklet habe ich unter anderem durch LilaHexes\footnote{\url{https://lilahexe.top/}} "Consent Formular" \footnote{\url{https://codeberg.org/LilaHexe/ConsentForm}}, einem Post von Avacyn\footnote{\url{https://fetlife.com/users/7507485/posts/9366912}}, sowie zahlreicher Webformulare erhalten. Mir haben dort jedoch meist Punkte gefehlt und manche Punkte wollte ich gerne anders umsetzen. Es ist also nicht verwunderlich, wenn sich ähnliche Formulierungen und Inhalte auch in ähnlichen Formularen wiederfinden. Zusätzlich sind die Themen Absprache und Konsent auch für mich sehr wichtig und dieses Booklet ist daher auch für mich sehr hilfreich. \bigbreak
+
+Das Booklet wird basierend auf Feedback hoffentlich\textsuperscript{\texttrademark} laufend aktualisiert. Die Version des Dokuments ist durch den Zeitstempel auf dem Deckblatt gekennzeichnet.
+
+\subsection{Technische Details}\label{Technische_Details}
+Der "normale"\footnote{Ich meine damit Leser, die nicht an den technischen Details interessiert sind, außer sie haben gewisse Freude daran, sich damit selbst zu foltern.} Leser möge diesen Part überspringen.
+
+Das gesamte Formular ist in \LaTeX\footnote{Nicht das kinky Material, sondern Lamport TeX: \url{https://www.latex-project.org/}} erstellt worden. Das hat gewisse Vorteile, beispielsweise, dass die PDF-Datei\footnote{Ursprünglich ISO 32000, inzwischen gibt es mehrere Standards: \url{https://www.adobe.com/de/acrobat/resources/document-files/pdf-types.html}} automatisch erstellt werden und ich eine Versionskontrolle\footnote{Beispielsweise git: \url{https://git-scm.com/}} für das Dokument benutzen kann. Dadurch können dann auch relativ einfach mehrere Menschen ihre Verbesserungen zeitgleich vorschlagen, auch wenn es Überschneidungen gibt\footnote{Stichwort Mergekonflikte} und Änderungen einfach wieder Rückgängig gemacht werden.
+
+Unter anderem aus Zeitgründen habe ich für die Erstellung mancher Texte und Strukturen auch auf ChatGPT\footnote{\url{https://openai.com/}} zurückgegriffen. Übersetzungen habe ich zum Teil mit DeepL\footnote{\url{https://www.deepl.com/}} durchgeführt.
+
+Das Projekt nutzt die MIT Lizenz\footnote{\url{https://www.tldrlegal.com/license/mit-license}}.
+
+\subsection{Kontakt und Mitarbeit}
+Wer den Abschnitt \ref{Technische_Details} nicht übersprungen hat, kann gerne direkt über die Projektseite \url{https://github.com/MixColumns/BDSM-Booklet} mitarbeiten und Anfragen stellen. Ansonsten ist auch eine Kontaktaufnahme über das FL Profil von CoffeeFox\footnote{\url{https://fetlife.com/users/17638126}} möglich.
+
 \end{document}
