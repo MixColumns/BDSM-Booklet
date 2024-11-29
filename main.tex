@@ -201,12 +201,122 @@ Kontaktpersonen sind von zentraler Bedeutung, da sie Sicherheit, Unterstützung 
 \noindent \textbf{Weitere Anmerkungen:} \newline
 \noindent \TextField[name=Contact2Anmerkungen,multiline=true,height=7em, width=37em]{}
 
+%%%%%%%%%%%%%%% Gesundheitszustand
+
+\newpage
+\section{Gesundheitszustand}
+Angaben zum aktuelle Gesundheitszustand sind wichtig, da sie sicherstellen, dass alle Beteiligten mögliche Risiken kennen und minimieren können. Informationen zu physischen und psychischen Gesundheitsproblemen, Medikamenten oder Allergien helfen dabei, Aktivitäten anzupassen, um Verletzungen oder negative Reaktionen zu vermeiden. Das Formular ermöglicht es, die Grenzen und Bedürfnisse aller sicher und verantwortungsvoll zu berücksichtigen, was essenziell für das Wohlbefinden und die Sicherheit ist.\textbf{Im folgenden Abschnitt kannst du also deinen Gesundheitszustand auflisten.}\footnote{Das Formular befindet sich auf der nächsten Seite, damit du nach dem Ausdrucken einfacher Seiten aktualisieren kannst. So musst du diesen Text nicht ebenfalls drucken und kannst die Informationen zum Gesundheitszustand ohne den Informationstext aufbewahren.}
+
+\newpage
+
+\section{Gesundheitszustand}
+\subsection{Hast du aktuell akute gesundheitliche Beschwerden?}
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitBeschwerdenN]{}\\
+    Ja, und zwar: & \TextField[name=GesundheitBeschwerdenJ,multiline=true,height=6em, width=25em]{} \\
+    Im Notfall ist folgendes zu tun: & \TextField[name=GesundheitBeschwerdenNotfall,multiline=true,height=6em, width=25em]{} \\
+\end{tabular}
+\end{Form}
+
+\subsection{Hast du chronische gesundheitliche Beschwerden?}
+Inbesondere Sachen die einen medizinischen Notstand auslösen können. Dazu zählen beispielsweise Asthma, COPD, Diabetes, Herzschwäche, Epilepsie, oder ähnliches. \\
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitChronischN]{}\\
+    Ja, und zwar: & \TextField[name=GesundheitChronisch,multiline=true,height=6em, width=25em]{} \\
+    Im Notfall ist folgendes zu tun: & \TextField[name=GesundheitChronischNotfall,multiline=true,height=6em, width=25em]{} \\
+\end{tabular}
+\end{Form}
+
+\subsection{Hast du aktuell Verletzungen oder körperliche Einschränkungen?}
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitVerletztN]{}\\
+    Ja, und zwar: & \TextField[name=GesundheitVerletzt,multiline=true,height=6em, width=25em]{} \\
+    Diese schränken mich wie folgt ein: & \TextField[name=GesundheitVerletztEinschr,multiline=true,height=6em, width=25em]{} \\
+\end{tabular}
+\end{Form}
+
+\newpage
+\subsection{Hast du Allergien?}
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitAllergieN]{}\\
+    Ja, und zwar: & \TextField[name=GesundheitAllergie,multiline=true,height=6em, width=25em]{} \\
+    Im Notfall ist folgendes zu tun: & \TextField[name=GesundheitAllergieNotfall,multiline=true,height=6em, width=25em]{} \\
+\end{tabular}
+\end{Form}
+
+\subsection{Benötigst du regelmäßige Medikamente?}
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitMedikamenteRegelN]{}\\
+    Ja, diese befinden sich ... und ich benötige sie ... oft: & \TextField[name=GesundheitMedikamenteRegel,multiline=true,height=6em, width=25em]{} \\
+\end{tabular}
+\end{Form}
+
+\subsection{Benötigst du Notfallmedikamente?}
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitMedikamenteNotfallN1n]{}\\
+    Ja, diese befinden sich ... und ich benötige sie wenn ... : & \TextField[name=GesundheitMedikamenteNotfall,multiline=true,height=6em, width=25em]{} \\
+\end{tabular}
+\end{Form}
+
+\subsection{Hast du besondere Trigger oder Traumata?}
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitTriggerN]{}\\
+    Ja, und zwar: & \TextField[name=GesundheitTrigger,multiline=true,height=6em, width=25em]{} \\
+\end{tabular}
+\end{Form}
+
+\newpage
+
+\subsection{Hast du Kreislaufprobleme?}
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitKreislaufN]{}\\
+    Ja & \CheckBox[name=GesundheitKreislaufJ]{}\\
+\end{tabular}
+\end{Form}
+
+\subsection{Hast du eine Blutgerinnungsstörung?}
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitBlutN]{}\\
+    Ja & \CheckBox[name=GesundheitBlutJ]{}\\
+\end{tabular}
+\end{Form}
+
+\subsection{Hast du Erste-Hilfe-Wissen?}
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitErsteHilfeN]{}\\
+    Ja & \CheckBox[name=GesundheitErsteHilfeJ]{}\\
+\end{tabular}
+\end{Form}
+
+\subsection{Wurdest du schon einmal auf STIs getestet?}
+\textbf{Mögliche Tests sind beispielsweise}: HIV, Hepatitis, Syphilis, Gonorrhoe, Chlamydien und Sonstige.\bigbreak
+\begin{Form}
+\begin{tabular}{P|l}
+    Nein & \CheckBox[name=GesundheitSTITestN]{}\\
+    Ja, am ... auf ... mit folgendem Ergebnis: & \TextField[name=GesundheitSTITest,multiline=true,height=6em, width=25em]{} 
+    \\
+\end{tabular}
+\end{Form}
+
+\subsection{Weitere Anmerkungen}
+\noindent \TextField[name=GesundheitAnmerkungen,multiline=true,height=17em, width=37em]{}
+
 %%%%%%%%%%%%%%% Aftercare
 
 \newpage
 \section{Aftercare}
 Aftercare spielt eine entscheidende Rolle, um sicherzustellen, dass alle Beteiligten nach einer Szene emotional und physisch unterstützt werden. Es fördert das Wohlbefinden, stärkt die Beziehung zwischen den Beteiligten und reduziert potenzielle negative Folgen einer intensiven Erfahrung. Dennoch ist aftercare immer individuell und es ist nicht immer möglich im Vorhinein zu sagen, wie aftercare aussehen sollte. Daher bieten die folgenden Punkte einen Leitfaden an dem sich ein Partner orientieren kann.
-\textbf{Im folgenden Abschnitt kannst du also deine Aftercare-Präferenzen auflisten.}\footnote{Das Formular befindet sich auf der nächsten Seite, damit du nach dem Ausdrucken einfacher Seiten aktualisieren kannst. So musst du diesen Text nicht ebenfalls drucken und kannst die Notfallkontakte ohne den Informationstext aufbewahren.}
+\textbf{Im folgenden Abschnitt kannst du also deine Aftercare-Präferenzen auflisten.}\footnote{Das Formular befindet sich auf der nächsten Seite, damit du nach dem Ausdrucken einfacher Seiten aktualisieren kannst. So musst du diesen Text nicht ebenfalls drucken und kannst die Aftercareliste ohne den Informationstext aufbewahren.}
 \newpage
 
 \subsection{Emotionale Bedürfnisse}
