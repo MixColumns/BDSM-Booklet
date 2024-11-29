@@ -6,7 +6,7 @@
 \usepackage{array}
 \usepackage{arydshln}
 \usepackage{enumitem}
-\usepackage[main=ngerman]{babel}
+\usepackage[ngerman]{babel}
 \usepackage{hyperref}
 \usepackage{datetime}
 \usepackage{qrcode}
@@ -47,12 +47,12 @@
 \section{Allgemeines}
 Diese Sammlung soll dabei helfen das Spielen in der Szene sicherer und einfacher zu machen. Die wichtigsten Themen sollten enthalten sein und die Formulare kännen digital oder manuell ausgefüllt werden und anschließend an Partnerpersonen versendet, in der Cloud geteilt, oder in einem Ordner mitgenommen werden. Prinzipiell ist es nicht nötig alle Formular und Seiten auszufüllen. Es können nach Bedarf einzelne Seiten genutzt werden. Ich habe versucht dies beim Design bestmöglich zu berücksichtigen.\bigbreak
 
-Die Inspiration für dieses Booklet habe ich unter anderem durch LilaHexes\footnote{\url{https://lilahexe.top/}} "Consent Formular" \footnote{\url{https://codeberg.org/LilaHexe/ConsentForm}}, einem Post von Avacyn\footnote{\url{https://fetlife.com/users/7507485/posts/9366912}}, sowie zahlreicher Webformulare erhalten. Mir haben dort jedoch meist Punkte gefehlt und manche Punkte wollte ich gerne anders umsetzen. Es ist also nicht verwunderlich, wenn sich ähnliche Formulierungen und Inhalte auch in ähnlichen Formularen wiederfinden. Zusätzlich sind die Themen Absprache und Konsent auch für mich sehr wichtig und dieses Booklet ist daher auch für mich sehr hilfreich. \bigbreak
+Die Inspiration für dieses Booklet habe ich unter anderem durch LilaHexes\footnote{\url{https://lilahexe.top/}} \glqq Consent Formular\grqq \footnote{\url{https://codeberg.org/LilaHexe/ConsentForm}}, einem Post von Avacyn\footnote{[Indizierte Plattform].com/users/7507485/posts/9366912}, sowie zahlreicher Webformulare erhalten. Mir haben dort jedoch meist Punkte gefehlt und manche Punkte wollte ich gerne anders umsetzen. Es ist also nicht verwunderlich, wenn sich ähnliche Formulierungen und Inhalte auch in ähnlichen Formularen wiederfinden. Zusätzlich sind die Themen Absprache und Konsent auch für mich sehr wichtig und dieses Booklet ist daher auch für mich sehr hilfreich. \bigbreak
 
 Das Booklet wird basierend auf Feedback hoffentlich\textsuperscript{\texttrademark} laufend aktualisiert. Die Version des Dokuments ist durch den Zeitstempel auf dem Deckblatt gekennzeichnet.
 
 \subsection{Technische Details}\label{Technische_Details}
-Der "normale"\footnote{Ich meine damit Leser, die nicht an den technischen Details interessiert sind, außer sie haben gewisse Freude daran, sich damit selbst zu foltern.} Leser möge diesen Part überspringen.
+Der \glqq normale\grqq\footnote{Ich meine damit Leser, die nicht an den technischen Details interessiert sind, außer sie haben gewisse Freude daran, sich damit selbst zu foltern.} Leser möge diesen Part überspringen.
 
 Das gesamte Formular ist in \LaTeX\footnote{Nicht das kinky Material, sondern Lamport TeX: \url{https://www.latex-project.org/}} erstellt worden. Das hat gewisse Vorteile, beispielsweise, dass die PDF-Datei\footnote{Ursprünglich ISO 32000, inzwischen gibt es mehrere Standards: \url{https://www.adobe.com/de/acrobat/resources/document-files/pdf-types.html}} automatisch erstellt werden und ich eine Versionskontrolle\footnote{Beispielsweise git: \url{https://git-scm.com/}} für das Dokument benutzen kann. Dadurch können dann auch relativ einfach mehrere Menschen ihre Verbesserungen zeitgleich vorschlagen, auch wenn es Überschneidungen gibt\footnote{Stichwort Mergekonflikte} und Änderungen einfach wieder Rückgängig gemacht werden.
 
@@ -61,6 +61,144 @@ Unter anderem aus Zeitgründen habe ich für die Erstellung mancher Texte und St
 Das Projekt nutzt die MIT Lizenz\footnote{\url{https://www.tldrlegal.com/license/mit-license}}.
 
 \subsection{Kontakt und Mitarbeit}
-Wer den Abschnitt \ref{Technische_Details} nicht übersprungen hat, kann gerne direkt über die Projektseite \url{https://github.com/MixColumns/BDSM-Booklet} mitarbeiten und Anfragen stellen. Ansonsten ist auch eine Kontaktaufnahme über das FL Profil von CoffeeFox\footnote{\url{https://fetlife.com/users/17638126}} möglich.
+Wer den Abschnitt \ref{Technische_Details} nicht übersprungen hat, kann gerne direkt über die Projektseite \url{https://github.com/MixColumns/BDSM-Booklet} mitarbeiten und Anfragen stellen. Ansonsten ist auch eine Kontaktaufnahme über das Profil von CoffeeFox\footnote{[Indizierte Plattform].com/users/17638126} möglich.
+
+%%%%%%%%%%%%%%% Persönliche Angaben
+
+\newpage
+\section{Persönliche Angaben}
+\subsection{Aktualität}
+\begin{tabular}{P|l}
+    Formular Zuletzt aktualisiert/ausgefüllt: & \TextField[name=MeLastUpdate,width=25em]{} \\
+    \hdashline
+\end{tabular}
+\subsection{Allgemeines}
+\begin{Form}
+\begin{tabular}{P|l}
+    Name / Szenename & \TextField[name=MeNick,width=25em]{}\\
+    \hdashline
+    Geburtsdatum / Geburtsjahr & \TextField[name=MeContact,width=25em]{} \\
+    \hdashline
+    Bevorzugter Name: & \TextField[name=MeBestName,width=25em]{} \\
+    \hdashline
+    Bevorzugte Pronomen: & \TextField[name=MePronouns,width=25em]{} \\
+    \hdashline
+    Kontaktmöglichkeiten: & \TextField[name=MeOtherContact,width=25em]{} \\
+    \hdashline
+    Lieblingstreffpunkte & \TextField[name=MeLocation,multiline=true,height=6em, width=25em]{} \\
+    \hdashline
+    Weitere Angaben & \TextField[name=MeMore,multiline=true,height=6em, width=25em]{} \\
+    \hdashline
+\end{tabular}
+\end{Form}
+
+\vspace*{2cm}\noindent\textbf{Hier hast du Platz für Fotos, Zeichnungen oder ähnliches:}
+
+%%%%%%%%%%%%%%% Notfall Kontaktpersonen
+
+\newpage
+\section{(Notfall) Kontakpersonen}
+Kontaktpersonen sind von zentraler Bedeutung, da sie Sicherheit, Unterstützung und emotionale Stabilität bieten. Diese Personen – oft als \glqq Safe Call\grqq oder Vertrauensperson bezeichnet – können in riskanteren Situationen oder auch bei Treffen mit neuen Partner*innen im Notfall eingreifen. Ihre Rolle stärkt das Vertrauen und ermöglicht es Beteiligten, ihre Vorlieben in einem geschützten Rahmen auszuleben. Bei Bedarf können diese Personen kontaktiert werden.
+\textbf{Im folgenden Abschnitt kannst du eine primäre und eine sekundäre Kontaktperson auflisten.}\footnote{Das Formular befindet sich auf der nächsten Seite, damit du nach dem Ausdrucken einfacher Seiten aktualisieren kannst. So musst du diesen Text nicht ebenfalls drucken und kannst die Notfallkontakte ohne den Informationstext aufbewahren.}
+
+\newpage
+\subsection{Primäre Kontaktperson}
+\begin{Form}
+	\begin{tabular}{P|l}
+		Name & \TextField[name=Contact1Name,width=25em]{}\\
+		\hdashline
+		Telefonnummer & \TextField[name=Contact1Telefon,width=25em]{} \\
+		\hdashline
+		Anmerkungen und weitere Kontaktdaten & \TextField[name=Contact1Kommentar,multiline=true,height=6em, width=25em]{} \\
+		\hdashline
+	\end{tabular}
+\end{Form}
+
+\subsubsection{Diese Person sollte kontaktiert werden, wenn...}
+\TextField[name=Contact1KontaktWenn,multiline=true,height=7em, width=37em]{}
+
+\subsubsection{Diese Person darf folgendes erfahren:}
+
+\begin{Form}
+	\CheckBox[name=Contact1UnfallJ]{Ja}
+	\CheckBox[name=Contact1UnfallN]{Nein}
+	\noindent Dass ein Unfall passiert ist.
+	\newline
+	\CheckBox[name=Contact1BDSMJ]{Ja}
+	\CheckBox[name=Contact1BdsmN]{Nein}
+	\noindent Dass der Unfall wegen einer BDSM Praktik passiert ist.
+	\newline
+	\CheckBox[name=Contact1BDSMUnfallJ]{Ja}
+	\CheckBox[name=Contact1BDSMUnfallN]{Nein}
+	\noindent Welche BDSM Praktik den Unfall ausgelöst hat.
+	\newline
+	\CheckBox[name=Contact1UnfallWerJ]{Ja}
+	\CheckBox[name=Contact1UnfallWerN]{Nein}
+	\noindent Mit wem der Unfall passiert ist.
+	\newline
+	\CheckBox[name=Contact1KrankenhausJ]{Ja}
+	\CheckBox[name=Contact1KrankenhausN]{Nein}
+	\noindent In welchen Krankenhaus man sich befindet (falls relevant)?
+\end{Form}
+
+\subsubsection{Weiteres}
+
+\CheckBox[name=Contact1LuegenJ]{Ja}
+\CheckBox[name=Contact1LuegenN]{Nein}
+\noindent Darf gelogen werden was passiert ist, falls notwendig?
+\bigbreak
+
+\noindent \textbf{Weitere Anmerkungen:} \newline
+\noindent \TextField[name=Contact1Anmerkungen,multiline=true,height=7em, width=37em]{}
+
+\newpage
+\subsection{Sekundäre Kontaktperson}
+\begin{Form}
+	\begin{tabular}{P|l}
+		Name & \TextField[name=Contact2Name,width=25em]{}\\
+		\hdashline
+		Telefonnummer & \TextField[name=Contact2Telefon,width=25em]{} \\
+		\hdashline
+		Anmerkungen und weitere Kontaktdaten & \TextField[name=Contact2Kommentar,multiline=true,height=6em, width=25em]{} \\
+		\hdashline
+	\end{tabular}
+\end{Form}
+
+\subsubsection{Diese Person sollte kontaktiert werden, wenn...}
+\TextField[name=Contact2KontaktWenn,multiline=true,height=7em, width=37em]{}
+
+\subsubsection{Diese Person darf folgendes erfahren:}
+
+\begin{Form}
+	\CheckBox[name=Contact2UnfallJ]{Ja}
+	\CheckBox[name=Contact2UnfallN]{Nein}
+	\noindent Dass ein Unfall passiert ist.
+	\newline
+	\CheckBox[name=Contact2BDSMJ]{Ja}
+	\CheckBox[name=Contact2BdsmN]{Nein}
+	\noindent Dass der Unfall wegen einer BDSM Praktik passiert ist.
+	\newline
+	\CheckBox[name=Contact2BDSMUnfallJ]{Ja}
+	\CheckBox[name=Contact2BDSMUnfallN]{Nein}
+	\noindent Welche BDSM Praktik den Unfall ausgelöst hat.
+	\newline
+	\CheckBox[name=Contact2UnfallWerJ]{Ja}
+	\CheckBox[name=Contact2UnfallWerN]{Nein}
+	\noindent Mit wem der Unfall passiert ist.
+	\newline
+	\CheckBox[name=Contact2KrankenhausJ]{Ja}
+	\CheckBox[name=Contact2KrankenhausN]{Nein}
+	\noindent In welchen Krankenhaus man sich befindet (falls relevant)?
+\end{Form}
+
+\subsubsection{Weiteres}
+
+\CheckBox[name=Contact2LuegenJ]{Ja}
+\CheckBox[name=Contact2LuegenN]{Nein}
+\noindent Darf gelogen werden was passiert ist, falls notwendig?
+\bigbreak
+
+\noindent \textbf{Weitere Anmerkungen:} \newline
+\noindent \TextField[name=Contact2Anmerkungen,multiline=true,height=7em, width=37em]{}
 
 \end{document}
